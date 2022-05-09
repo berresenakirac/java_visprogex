@@ -305,7 +305,7 @@ public class Lab_7_201213007 extends javax.swing.JFrame {
         BufferedWriter bWriter = new BufferedWriter(fileWriter);
         try {
             bWriter.write(jTextArea1.getText());
-           JOptionPane.showMessageDialog(null,"DOSYAYA YAZILDI");
+           JOptionPane.showMessageDialog(null,"saved the file");
         } catch (IOException ex) {
             Logger.getLogger(Lab_7_201213007.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -323,21 +323,21 @@ public class Lab_7_201213007 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jTextArea1.append("Gönderici : ");
+        jTextArea1.append("consignor's : ");
         jTextArea1.append(jTextField1.getText());
-        jTextArea1.append(" Adres : ");
+        jTextArea1.append(" Address : ");
         jTextArea1.append(String.valueOf(jComboBox2.getSelectedItem()));
-        jTextArea1.append(" Alıcı : ");
+        jTextArea1.append(" purchase : ");
         jTextArea1.append(jTextField4.getText());
-        jTextArea1.append(" Adres : ");
+        jTextArea1.append(" Address : ");
         jTextArea1.append(String.valueOf(jComboBox1.getSelectedItem()));
-        int tutar = Integer.parseInt(jTextField2.getText())*Integer.parseInt(jTextField2.getText());
-        summary = summary + tutar;
+        int cost = Integer.parseInt(jTextField2.getText())*Integer.parseInt(jTextField2.getText());
+        summary = summary + cost;
         if(jRadioButton1.isSelected()){
-            jTextArea1.append(" alıcı tutar: ");
+            jTextArea1.append(" purchase's cost: ");
         }
         else{
-            jTextArea1.append(" gönderici tutar: ");
+            jTextArea1.append("consignor's tutar: ");
         }
         jTextArea1.append(String.valueOf(tutar));
         jTextArea1.append("\n\n");
